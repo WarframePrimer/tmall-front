@@ -13,12 +13,12 @@ const orderList = () => import('/page/User/children/order.vue')
 const information = () => import('/page/User/children/information.vue')
 const addressList = () => import('/page/User/children/addressList.vue')
 const coupon = () => import('/page/User/children/coupon.vue')
-const aihuishou = () => import('/page/User/children/aihuishou.vue')
-const support = () => import('/page/User/children/support.vue')
+// const aihuishou = () => import('/page/User/children/aihuishou.vue')
+// const support = () => import('/page/User/children/support.vue')
 const checkout = () => import('/page/Checkout/checkout.vue')
 const payment = () => import('/page/Order/payment.vue')
 const paysuccess = () => import('/page/Order/paysuccess.vue')
-const Thanks = () => import('/page/Thanks/thanks.vue')
+// const Thanks = () => import('/page/Thanks/thanks.vue')
 const Search = () => import('/page/Search/search.vue')
 const RefreshSearch = () => import('/page/Refresh/refreshsearch.vue')
 const RefreshGoods = () => import('/page/Refresh/refreshgoods.vue')
@@ -38,7 +38,7 @@ export default new Router({
         {path: 'home', component: Home},
         {path: 'goods', component: GoodS},
         {path: 'goodsDetails', name: 'goodsDetails', component: goodsDetails},
-        {path: 'thanks', name: 'thanks', component: Thanks},
+        // {path: 'thanks', name: 'thanks', component: Thanks},
         {path: '/refreshgoods', name: 'refreshgoods', component: RefreshGoods}
       ]
     },
@@ -69,9 +69,9 @@ export default new Router({
         {path: 'orderDetail', name: '订单详情', component: orderDetail},
         {path: 'information', name: '账户资料', component: information},
         {path: 'addressList', name: '收货地址', component: addressList},
-        {path: 'coupon', name: '我的优惠', component: coupon},
-        {path: 'support', name: '售后服务', component: support},
-        {path: 'aihuishou', name: '以旧换新', component: aihuishou}
+        {path: 'coupon', name: '我的优惠', component: coupon}
+        // {path: 'support', name: '售后服务', component: support},
+        // {path: 'aihuishou', name: '以旧换新', component: aihuishou}
       ]
     },
     {path: '/checkout', name: 'checkout', component: checkout},

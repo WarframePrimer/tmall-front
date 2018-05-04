@@ -23,24 +23,24 @@ export const upload = (params) => {
 export const updateheadimage = (params) => {
   return http.fetchPost('/member/updateheadimage', params)
 }
-// 捐赠列表
-export const thanksList = (params) => {
-  return http.fetchGet('/member/thanks', params)
-}
+// // 捐赠列表
+// export const thanksList = (params) => {
+//   return http.fetchGet('/member/thanks', params)
+// }
 // 首页接口
 export const productHome = (params) => {
-  return http.fetchGet('/goods/home', params)
+  return http.fetchGet('/goods/productHome', params)
 }
 // 推荐板块
 export const recommend = (params) => {
   return http.fetchGet('/goods/recommend', params)
 }
-// 捐赠板块
-export const thank = (params) => {
-  return http.fetchGet('/goods/thank', params)
-}
+// // 捐赠板块
+// export const thank = (params) => {
+//   return http.fetchGet('/goods/thank', params)
+// }
 // 极验验证码
-export const geetest = (params) => {
-  return http.fetchGet('/member/geetestInit?t=' + (new Date()).getTime(), params)
-}
+// export const geetest = (params) => {
+//   return http.fetchGet('/member/geetestInit?t=' + (new Date()).getTime(), params)
+// }
 

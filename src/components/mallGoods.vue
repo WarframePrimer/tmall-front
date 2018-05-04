@@ -10,7 +10,7 @@
       <h3 class="sub-title ellipsis">{{msg.subTitle}}</h3>
       <div class="good-price pr">
         <div class="ds pa">
-          <a target="_blank" :href="'http://xmall.exrick.cn/#/goodsDetails?productId='+msg.productId">
+          <a target="_blank" :href="'http://127.0.0.1:9999/#/goodsDetails?productId='+msg.productId">
             <y-button text="查看详情" style="margin: 0 5px"></y-button>
           </a>
           <y-button text="加入购物车"

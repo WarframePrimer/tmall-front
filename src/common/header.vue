@@ -5,7 +5,7 @@
         <div class="w-box">
           <div class="nav-logo">
             <h1 @click="changePage(1)">
-              <router-link to="/" title="XMall商城官网">XMall商城</router-link>
+              <router-link to="/" title="TMall商城官网">TMall商城</router-link>
             </h1>
           </div>
           <div class="right-box">
@@ -21,7 +21,7 @@
                 :on-icon-click="handleIconClick">
               </el-autocomplete>
               <router-link to="/goods"><a @click="changePage(2)">全部商品</a></router-link>
-              <router-link to="/thanks"><a @click="changePage(4)">捐赠</a></router-link>
+              <!--<router-link to="/thanks"><a @click="changePage(4)">捐赠</a></router-link>-->
               <!-- <router-link to="/">Smartisan M1 / M1L</router-link>
               <router-link to="/">Smartisan OS</router-link>
               <router-link to="/">欢喜云</router-link>
@@ -52,9 +52,9 @@
                       <li>
                         <router-link to="/user/addressList">收货地址</router-link>
                       </li>
-                      <li>
-                        <router-link to="/user/support">售后服务</router-link>
-                      </li>
+                      <!--<li>-->
+                        <!--<router-link to="/user/support">售后服务</router-link>-->
+                      <!--</li>-->
                       <li>
                         <router-link to="/user/coupon">我的优惠</router-link>
                       </li>
@@ -137,17 +137,17 @@
                 <li>
                   <a @click="changGoods(3)" :class="{active:choosePage===3}">品牌周边</a>
                 </li>
+                <!--<li>-->
+                  <!--<router-link to="/thanks"><a @click="changePage(4)" :class="{active:choosePage===4}">捐赠名单</a></router-link>-->
+                <!--</li>-->
                 <li>
-                  <router-link to="/thanks"><a @click="changePage(4)" :class="{active:choosePage===4}">捐赠名单</a></router-link>
+                  <a href="http://localhost:8071" target="_blank">后台管理系统</a>
                 </li>
+		            <!--<li>-->
+                  <!--<a href="http://xpay.exrick.cn" target="_blank">XPay支付系统</a>-->
+                <!--</li>-->
                 <li>
-                  <a href="http://xmadmin.exrick.cn" target="_blank">后台管理系统</a>
-                </li>
-		            <li>
-                  <a href="http://xpay.exrick.cn" target="_blank">XPay支付系统</a>
-                </li>
-                <li>
-                  <a href="https://github.com/Exrick/xmall" target="_blank">Github</a>
+                  <a href="https://github.com/warframeprimer" target="_blank">Github</a>
                 </li>
               </ul>
               <div></div>

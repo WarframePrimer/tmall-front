@@ -28,7 +28,7 @@
           <div class="box-btn">
             <div>
               <span>
-              
+
               </span>
               <em><span>¥</span>{{orderTotal}}</em>
               <y-button :text="payNow"
@@ -43,17 +43,17 @@
       </div>
     </y-shelf>
 
-    <el-dialog
-      title="支付红包"
-      :visible.sync="dialogVisible"
-      width="30%"
-      @close="handleClose" style="text-align:center;width:50%;margin:0 auto">
-      <img src="http://oweupqzdv.bkt.clouddn.com/1512881761970_small.jpg" class="qr-red"/>
-      <span>支付前领个红包吧(每日可领一次)</span>
-      <span slot="footer" class="dialog-footer">
-        <el-button type="primary" @click="dialogVisible = false">领取了</el-button>
-      </span>
-    </el-dialog>
+    <!--<el-dialog-->
+      <!--title="支付红包"-->
+      <!--:visible.sync="dialogVisible"-->
+      <!--width="30%"-->
+      <!--@close="handleClose" style="text-align:center;width:50%;margin:0 auto">-->
+      <!--<img src="http://oweupqzdv.bkt.clouddn.com/1512881761970_small.jpg" class="qr-red"/>-->
+      <!--<span>支付前领个红包吧(每日可领一次)</span>-->
+      <!--<span slot="footer" class="dialog-footer">-->
+        <!--<el-button type="primary" @click="dialogVisible = false">领取了</el-button>-->
+      <!--</span>-->
+    <!--</el-dialog>-->
   </div>
 </template>
 <script>
@@ -348,7 +348,7 @@
     color: #222;
     margin-top: -18px;
   }
-  
+
   .timeout{
     position: absolute;
     top: 0;
