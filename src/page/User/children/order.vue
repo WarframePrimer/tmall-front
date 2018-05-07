@@ -139,8 +139,8 @@
           }
         }
         orderList(params).then(res => {
-          this.orderList = res.result.data
-          this.total = res.result.total
+          this.orderList = res.result
+          // this.total = res.result
           this.loading = false
         })
       },

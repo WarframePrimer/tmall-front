@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-
+    <!--v-if="!error"-->
   <div v-loading="loading" element-loading-text="加载中..." style="min-height: 35vw;" v-if="!error">
     <div class="banner" >
       <div class="bg" ref="bg"
@@ -54,6 +54,7 @@
       </div>
     </div>
 
+    <!--v-if="error"-->
     <div class="no-info" v-if="error">
       <div class="no-data">
         <img src="/static/images/error.png">
@@ -164,14 +165,16 @@
           this.error = true
           return
         }
+        // home_floors;home_hot
         let data = res.result
-        this.home = data
-        this.loading = false
-        for (let i = 0; i < data.length; i++) {
-          if (data[i].type === 0) {
-            this.banner = data[i].panelContents
-          }
-        }
+        this.home = data.home_floors
+        this.banner = data.home_hot
+        // // this.loading = false
+        // for (let i = 0; i < banner.length; i++) {
+        //   if (data[i].type === 0) {
+        //     this.banner =
+        //   }
+        // }
       })
       this.showNotify()
     },
