@@ -26,7 +26,6 @@
               <el-checkbox class="auto-login" v-model="autoLogin">记住密码</el-checkbox>
               <!-- <span class="pa" style="top: 0;left: 0;color: #d44d44">{{ruleForm.errMsg}}</span> -->
               <a href="javascript:;" class="register" @click="toRegister">注册 TMall 账号</a>
-              <!--<a style="padding: 1px 0 0 10px" @click="open('找回密码','请联系作者邮箱找回密码或使用测试账号登录：test | test')">忘记密码 ?</a>-->
             </li>
           </ul>
           <!--登陆-->
@@ -42,25 +41,21 @@
               style="marginTop: 10px;marginBottom: 15px;width: 100%;height: 48px;font-size: 18px;line-height: 48px">
             </y-button>
           </div>
-          <div class="border"></div>
-          <div class="footer">
-            <div class="other">其它账号登录：</div>
-            <!--<a><img @click="open('待开发','此功能开发中...')" style="height: 15px; margin-top: 22px;" src="/static/images/other-login.png"></a>-->
-          </div>
+          <!--<div class="border"></div>-->
         </div>
       </div>
     </div>
   </div>
 </template>
-<script src="../../../static/geetest/gt.js"></script>
+<!--<script src="../../../static/geetest/gt.js"></script>-->
 <script>
 import YFooter from '/common/footer'
 import YButton from '/components/YButton'
 import { userLogin } from '/api/index.js'
 import { addCart } from '/api/goods.js'
 import { setStore, getStore, removeStore } from '/utils/storage.js'
-require('../../../static/geetest/gt.js')
-var captcha
+// require('../../../static/geetest/gt.js')
+// var captcha
 export default {
   data () {
     return {
@@ -95,7 +90,7 @@ export default {
     },
     messageSuccess () {
       this.$message({
-        message: '恭喜您，注册成功！赶紧登录体验吧',
+        message: '恭喜您，登录成功！',
         type: 'success'
       })
     },
@@ -151,22 +146,12 @@ export default {
       this.logintxt = '登录中...'
       this.rememberPass()
       if (!this.ruleForm.userName || !this.ruleForm.userPwd) {
-        // this.ruleForm.errMsg = '账号或者密码不能为空!'
         this.message('账号或者密码不能为空!')
         return false
       }
-      // var result = captcha.getValidate()
-      // if (!result) {
-      //   this.message('请完成验证')
-      //   this.logintxt = '登录'
-      //   return false
-      // }
       var params = {
         userName: this.ruleForm.userName,
         userPwd: this.ruleForm.userPwd
-        // challenge: result.geetest_challenge,
-        // validate: result.geetest_validate,
-        // seccode: result.geetest_seccode
       }
       userLogin(params).then(res => {
         if (res.result.state === 1) {
@@ -192,7 +177,7 @@ export default {
         } else {
           this.logintxt = '登录'
           this.message(res.result.message)
-          captcha.reset()
+          // captcha.reset()
           return false
         }
       })

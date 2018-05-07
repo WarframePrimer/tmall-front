@@ -33,7 +33,6 @@
                     <div class="num">{{good.productNum}}</div>
                     <div class="type">
                       <el-button style="margin-left:20px" @click="_delOrder(item.orderId,i)" type="danger" size="small" v-if="j<1" class="del-order">删除此订单</el-button>
-                      <!-- <a @click="_delOrder(item.orderId,i)" href="javascript:;" v-if="j<1" class="del-order">删除此订单</a> -->
                     </div>
                   </div>
                 </div>
