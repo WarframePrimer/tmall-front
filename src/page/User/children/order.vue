@@ -2,6 +2,7 @@
   <div>
     <y-shelf title="我的订单">
       <div slot="content">
+        <!--v-if="orderList.length"-->
         <div v-loading="loading" element-loading-text="加载中..." v-if="orderList.length" style="min-height: 10vw;">
           <div v-for="(item,i) in orderList" :key="i">
             <div class="gray-sub-title cart-title">
@@ -51,6 +52,7 @@
             </div>
           </div>
         </div>
+        <!--v-else-->
         <div v-loading="loading" element-loading-text="加载中..." class="no-info" v-else>
           <div style="padding: 100px 0;text-align: center">
             你还未创建过订单

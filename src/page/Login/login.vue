@@ -17,14 +17,8 @@
                 <input type="password" v-model="ruleForm.userPwd" @keyup.enter="login" placeholder="密码">
               </div>
             </li>
-            <!--<li>-->
-              <!--<div id="captcha">-->
-                <!--<p id="wait">正在加载验证码...</p>-->
-              <!--</div>-->
-            <!--</li>-->
             <li style="text-align: right" class="pr">
               <el-checkbox class="auto-login" v-model="autoLogin">记住密码</el-checkbox>
-              <!-- <span class="pa" style="top: 0;left: 0;color: #d44d44">{{ruleForm.errMsg}}</span> -->
               <a href="javascript:;" class="register" @click="toRegister">注册 TMall 账号</a>
             </li>
           </ul>
@@ -47,15 +41,12 @@
     </div>
   </div>
 </template>
-<!--<script src="../../../static/geetest/gt.js"></script>-->
 <script>
 import YFooter from '/common/footer'
 import YButton from '/components/YButton'
 import { userLogin } from '/api/index.js'
 import { addCart } from '/api/goods.js'
 import { setStore, getStore, removeStore } from '/utils/storage.js'
-// require('../../../static/geetest/gt.js')
-// var captcha
 export default {
   data () {
     return {
@@ -182,32 +173,7 @@ export default {
         }
       })
     }
-    // init_geetest () {
-    //   geetest().then(res => {
-    //     window.initGeetest({
-    //       gt: res.gt,
-    //       challenge: res.challenge,
-    //       new_captcha: res.new_captcha,
-    //       offline: !res.success,
-    //       product: 'popup',
-    //       width: '100%'
-    //     }, function (captchaObj) {
-    //       captcha = captchaObj
-    //       captchaObj.appendTo('#captcha')
-    //       captchaObj.onReady(function () {
-    //         document.getElementById('wait').style.display = 'none'
-    //       })
-    //       this.login()
-    //     })
-    //   })
-    // }
   },
-  // mounted () {
-  //   this.getRemembered()
-  //   this.login_addCart()
-  //   this.init_geetest()
-  //   this.open('登录提示', '测试体验账号密码：test | test')
-  // },
   components: {
     YFooter,
     YButton
